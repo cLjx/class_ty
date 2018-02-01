@@ -1,6 +1,6 @@
 close all;
 clc;clear;
-for i=0:9 
+for i=0:7 
     ne=0;nt=0;
     snr=10^(i/10);
     N0=7/4/snr;
@@ -32,8 +32,8 @@ for i=0:9
     end
     BER(i+1)=ne/nt
 end
-semilogy(0:9,BER,'-rd');grid on;
-Snrd = 0:9;
+semilogy(0:7,BER,'-rd');grid on;
+Snrd = 0:7;
 snr = 10.^(Snrd./10);
 hold on;
 EBER = qfunc(sqrt(2*snr));
